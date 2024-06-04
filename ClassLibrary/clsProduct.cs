@@ -1,4 +1,6 @@
-﻿namespace ClassLibrary
+﻿using System;
+
+namespace ClassLibrary
 {
     public class clsProduct
     {
@@ -9,5 +11,11 @@
         public string ScentType { get; set; }
         public string Occasion { get; set; }
         public int Availability { get; set; }
+
+        public bool Find(int productID)
+        {
+            //always return true
+            return true;
+        }
     }
 }

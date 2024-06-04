@@ -1,4 +1,5 @@
 ﻿using ClassLibrary;
+using Hl7.Fhir.Utility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -54,7 +55,7 @@ namespace Testing4
             //test to see that the two values are the same
             Assert.AreEqual(AProduct.Occasion, TestData);
         }
-        //[TestMethod]
+        [TestMethod]
         public void AvailabilityProductOK()
         {
            // Create an instance of the class we want to create
@@ -66,6 +67,29 @@ namespace Testing4
             //test to see that the two values are the same
             Assert.AreEqual(AProduct.Availability, TestData);
        }
+        [TestMethod]
+        public void FindMethodOK()
+        {
+
+            //create an instance of the new class we want to create 
+            clsProduct AProduct = new clsProduct();
+            //create a boolean variable to store the results of validation
+            Boolean Found = false;
+            //create some test data
+            Int32 ProductID = 23;
+            //invoke the method
+            Found = AProduct.Find(ProductID);
+            //check the product ID
+            if (AProduct.ProductId != 23)
+            {
+                
+
+            }
+            //test to see if the result is true
+            Assert.IsTrue( Found );
+
+        }
+
 
 
 
