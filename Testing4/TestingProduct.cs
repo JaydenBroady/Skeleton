@@ -68,27 +68,175 @@ namespace Testing4
             Assert.AreEqual(AProduct.Availability, TestData);
        }
         [TestMethod]
-        public void FindMethodOK()
+        public void TestProductIdFound()
         {
 
             //create an instance of the new class we want to create 
             clsProduct AProduct = new clsProduct();
             //create a boolean variable to store the results of validation
             Boolean Found = false;
+            //create a boolean variable to record if the data is Ok
+            Boolean Ok = true;
             //create some test data
-            Int32 ProductID = 23;
+            Int32 ProductID = 21;
             //invoke the method
             Found = AProduct.Find(ProductID);
             //check the product ID
-            if (AProduct.ProductId != 23)
+            if (AProduct.ProductId != 21)
             {
-                
+                Ok = false;
 
             }
             //test to see if the result is true
             Assert.IsTrue( Found );
 
         }
+
+        [TestMethod]
+       
+        public void TestNameFound()
+        {
+            //create an instance of the new class we want to create 
+            clsProduct AProduct = new clsProduct();
+            //create a boolean variable to store the results of validation
+            Boolean Found = false;
+            //create a boolean variable to record if the data is Ok
+            Boolean Ok = true;
+            //create some test data
+            Int32 ProductID = 21;
+            //invoke the method
+            Found = AProduct.Find(ProductID);
+            //check the product ID
+            if (AProduct.Name != "Test Name")
+            {
+                Ok = false;
+
+            }
+            //test to see if the result is true
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+
+        public void Descriptionfound()
+        {
+            //create an instance of the new class we want to create 
+            clsProduct AProduct = new clsProduct();
+            //create a boolean variable to store the results of validation
+            Boolean Found = false;
+            //create a boolean variable to record if the data is Ok
+            Boolean Ok = true;
+            //create some test data
+            Int32 ProductID = 21;
+            //invoke the method
+            Found = AProduct.Find(ProductID);
+            //check the product ID
+            if (AProduct.Description != "Test Description")
+            {
+                Ok = false;
+
+            }
+            //test to see if the result is true
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+
+        public void Occasionfound()
+        {
+            //create an instance of the new class we want to create 
+            clsProduct AProduct = new clsProduct();
+            //create a boolean variable to store the results of validation
+            Boolean Found = false;
+            //create a boolean variable to record if the data is Ok
+            Boolean Ok = true;
+            //create some test data
+            Int32 ProductID = 21;
+            //invoke the method
+            Found = AProduct.Find(ProductID);
+            //check the product ID
+            if (AProduct.Occasion != "Test Occasion")
+            {
+                Ok = false;
+
+            }
+            //test to see if the result is true
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+
+        public void Pricefound()
+        {
+            //create an instance of the new class we want to create 
+            clsProduct AProduct = new clsProduct();
+            //create a boolean variable to store the results of validation
+            Boolean Found = false;
+            //create a boolean variable to record if the data is Ok
+            Boolean Ok = true;
+            //create some test data
+            Int32 ProductID = 21;
+            //invoke the method
+            Found = AProduct.Find(ProductID);
+            //check the product ID
+            if (AProduct.Price != "Test Price")
+            {
+                Ok = false;
+
+            }
+            //test to see if the result is true
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+
+        public void ScentTypefound()
+        {
+            //create an instance of the new class we want to create 
+            clsProduct AProduct = new clsProduct();
+            //create a boolean variable to store the results of validation
+            Boolean Found = false;
+            //create a boolean variable to record if the data is Ok
+            Boolean Ok = true;
+            //create some test data
+            Int32 ProductID = 21;
+            //invoke the method
+            Found = AProduct.Find(ProductID);
+            //check the product ID
+            if (AProduct.ScentType != "Test Scent Type")
+            {
+                Ok = false;
+
+            }
+            //test to see if the result is true
+            Assert.IsTrue(Found);
+
+        }
+
+        [TestMethod]
+
+        public void Availabilityfound()
+        {
+            //create an instance of the new class we want to create 
+            clsProduct AProduct = new clsProduct();
+            //create a boolean variable to store the results of validation
+            Boolean Found = false;
+            //create a boolean variable to record if the data is Ok
+            Boolean Ok = true;
+            //create some test data
+            Int32 ProductID = 21;
+            //invoke the method
+            Found = AProduct.Find(ProductID);
+            //check the product ID
+            if (AProduct.Availability != 5)
+            {
+                Ok = false;
+
+            }
+            //test to see if the result is true
+            Assert.IsTrue(Found);
+        }
+
 
 
 

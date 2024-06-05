@@ -9,13 +9,12 @@
 <body>
     &nbsp;<form id="form1" runat="server">
             <asp:Label ID="lblNameProduct" runat="server" style="z-index: 1; left: 6px; position: absolute; height: 20px; width: 102px; margin-bottom: 0px" Text="Product Name"></asp:Label>
+            <asp:TextBox ID="txtNameProduct" runat="server" style="z-index: 1; left: 105px; top: 40px; position: absolute; width: 138px"></asp:TextBox>
         <div>
-            <asp:Label ID="lblProductID" runat="server" style="z-index: 1; left: 6px; top: 16px; position: absolute" Text="ProductID" width="102px"></asp:Label>
-            <asp:TextBox ID="txtProductID" runat="server" style="z-index: 1; left: 105px; top: 15px; position: absolute; width: 138px"></asp:TextBox>
+            <asp:Label ID="lblProductId" runat="server" style="z-index: 1; left: 6px; top: 16px; position: absolute" Text="ProductID" width="102px"></asp:Label>
+            <asp:TextBox ID="txtProductId" runat="server" style="z-index: 1; left: 105px; top: 15px; position: absolute; width: 138px"></asp:TextBox>
         </div>
-        <asp:TextBox ID="txtAvailability" runat="server" style="z-index: 1; left: 105px; top: 46px; position: absolute" width="138px"></asp:TextBox>
-        <p>
-            &nbsp;</p>
+      
         <p style="width: 527px">
             <asp:TextBox ID="txtScentType" runat="server" style="z-index: 1; left: 105px; top: 81px; position: absolute; height: 18px; width: 138px"></asp:TextBox>
             <asp:Label ID="lblScentType" runat="server" style="z-index: 1; left: 6px; top: 84px; position: absolute; width: 102px; height: 20px" Text="Scent Type"></asp:Label>

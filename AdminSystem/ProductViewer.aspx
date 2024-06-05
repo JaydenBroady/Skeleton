@@ -7,7 +7,6 @@
     <title></title>
 </head>
 <body>
-    Hiya
     <form id="form1" runat="server">
         <div>
         </div>
