@@ -25,7 +25,7 @@ namespace Testing4
             //create an instance of the class we want to create
             clsProduct AProduct = new clsProduct();
             //create some test data to assign to the product
-            decimal TestData = 10;
+            Int32 TestData = 10;
             //assign the data to the product
             AProduct.Price = TestData;
             //test to see that the two values are the same
@@ -68,6 +68,20 @@ namespace Testing4
             Assert.AreEqual(AProduct.Availability, TestData);
        }
         [TestMethod]
+
+        public void ProductIdOk()
+        {
+
+            // Create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //create some test data to assign to the product
+            Int32 TestData = 32;
+            //assign the data to the product
+            AProduct.ProductId = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AProduct.ProductId, TestData);
+        }
+        [TestMethod]
         public void TestProductIdFound()
         {
 
@@ -88,8 +102,7 @@ namespace Testing4
 
             }
             //test to see if the result is true
-            Assert.IsTrue( Found );
-
+            Assert.IsTrue(Found);
         }
 
         [TestMethod]
@@ -164,6 +177,7 @@ namespace Testing4
             Assert.IsTrue(Found);
         }
 
+
         [TestMethod]
 
         public void Pricefound()
@@ -179,7 +193,7 @@ namespace Testing4
             //invoke the method
             Found = AProduct.Find(ProductID);
             //check the product ID
-            if (AProduct.Price != "Test Price")
+            if (AProduct.Price != 10)
             {
                 Ok = false;
 

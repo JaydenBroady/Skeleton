@@ -46,9 +46,9 @@ namespace ClassLibrary
             }
         }
 
-        private decimal mPrice;
+        private Int32 mPrice;
 
-        public decimal Price
+        public int Price
         {
             get
             {
