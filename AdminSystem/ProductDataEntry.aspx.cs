@@ -10,77 +10,57 @@ public partial class _1_DataEntry : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+
 
 
     }
 
-   
+
 
     protected void btnOK_Click(object sender, EventArgs e)
     {
-        // new instance of clsProduct
+        // Create a new instance of clsProduct
         clsProduct AProduct = new clsProduct();
-        //capture availability
-        AProduct.Availability = Convert.ToInt32(txtAvailability.Text);
-        // stores the information in the session object
-        Session["AProduct"] = AProduct;
-        //naviagte to the view page 
-        Response.Redirect("ProductViewer.aspx");
 
-        // new instance of clsProduct
-        clsProduct AProduct2 = new clsProduct();
-        //capture availability
-        AProduct.ProductId = Convert.ToInt32(txtProductId.Text);
-        // stores the information in the session object
-        Session["AProduct"] = AProduct;
-        //naviagte to the view page 
-        Response.Redirect("ProductViewer.aspx");
+        // Capture values from the textboxes
+        string Availability = txtAvailability.Text;
+        string ProductId = txtProductId.Text;
+        string Description = txtDescription.Text;
+        string Occasion = txtOccasion.Text;
+        string Name = txtNameProduct.Text;
+        string ScentType = txtScentType.Text;
+        string Price = txtPrice.Text;
 
+        // Variable to store any error messages
+        string Error = "";
 
-        // new instance of clsProduct
-        clsProduct AProduct3 = new clsProduct();
-        //capture availability
-        AProduct.Description = txtDescription.Text;
-        // stores the information in the session object
-        Session["AProduct"] = AProduct;
-        //naviagte to the view page 
-        Response.Redirect("ProductViewer.aspx");
+        // Validate the data (assuming a valid method exists)
+        // Error = AProduct.Valid(Availability, ProductId, Description, Occasion, Name, ScentType, Price);
 
-        // new instance of clsProduct
-        clsProduct AProduct4 = new clsProduct();
-        //capture availability
-        AProduct.Occasion = txtOccasion.Text;
-        // stores the information in the session object
-        Session["AProduct"] = AProduct;
-        //naviagte to the view page 
-        Response.Redirect("ProductViewer.aspx");
+        if (Error == "")
+        {
+            // Capture the values into the clsProduct object
+            AProduct.Availability = Convert.ToInt32(Availability);
+            AProduct.ProductId = Convert.ToInt32(ProductId);
+            AProduct.Description = Description;
+            AProduct.Occasion = Occasion;
+            AProduct.Name = Name;
+            AProduct.ScentType = ScentType;
+            AProduct.Price = Convert.ToInt32(Price);
 
-        // new instance of clsProduct
-        clsProduct AProduct5 = new clsProduct();
-        //capture availability
-        AProduct.Name = txtNameProduct.Text;
-        // stores the information in the session object
-        Session["AProduct"] = AProduct;
-        //naviagte to the view page 
-        Response.Redirect("ProductViewer.aspx");
+            // Store the AProduct object in the session
+            Session["AProduct"] = AProduct;
 
-        // new instance of clsProduct
-        clsProduct AProduct6 = new clsProduct();
-        //capture availability
-        AProduct.ScentType = txtScentType.Text;
-        // stores the information in the session object
-        Session["AProduct"] = AProduct;
-        //naviagte to the view page 
-        Response.Redirect("ProductViewer.aspx");
-
-        // new instance of clsProduct
-        clsProduct AProduct7 = new clsProduct();
-        //capture availability
-        AProduct.Price = Convert.ToInt32(txtPrice.Text);
-        // stores the information in the session object
-        Session["AProduct"] = AProduct;
-        //naviagte to the view page 
-       Response.Redirect("ProductViewer.aspx");
+            // Navigate to the view page
+            Response.Redirect("ProductViewer.aspx");
+        }
+        else
+        {
+            // Handle the error (e.g., display error message)
+            lblError.Text = Error;
+        }
     }
 }
+
+
+
