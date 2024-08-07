@@ -35,7 +35,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
         string Error = "";
 
         // Validate the data (assuming a valid method exists)
-        // Error = AProduct.Valid(Availability, ProductId, Description, Occasion, Name, ScentType, Price);
+        //Error = AProduct.Valid(Availability, ProductId, Description, Occasion, Name, ScentType, Price);
 
         if (Error == "")
         {
